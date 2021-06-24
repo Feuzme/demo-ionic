@@ -9,12 +9,14 @@
   <ion-card>
     <ion-card-header>
       <ion-card-title>
-        Chats ?
+        Chats ? {{catResponse.width + " " + catResponse.height}}
         <ion-button (click)="refreshCat()">Un autre !</ion-button>
       </ion-card-title>
-      <ion-card-content>
-        <ion-img [src]="catResponse.url"></ion-img>
-      </ion-card-content>
+      <div *ngIf="catResponse.url">
+        <ion-card-content>
+          <ion-img [src]="catResponse.url"></ion-img>
+        </ion-card-content>
     </ion-card-header>
+    </div>
   </ion-card>
 </ion-content>

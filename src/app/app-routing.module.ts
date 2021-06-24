@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CatsComponent } from './cats/cats.component';
 
 const routes: Routes = [
   {
+    path: 'cats',
+    component: CatsComponent
+  },
+  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'cats',
     pathMatch: 'full'
   },
 ];

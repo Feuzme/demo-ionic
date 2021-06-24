@@ -10,9 +10,10 @@
     <ion-card-header>
       <ion-card-title>
         Chats ?
+        <ion-button (click)="refreshCat()">Un autre !</ion-button>
       </ion-card-title>
       <ion-card-content>
-        <ion-img src="https://cdn2.thecatapi.com/images/ct4.jpg"></ion-img>
+        <ion-img [src]="catResponse.url"></ion-img>
       </ion-card-content>
     </ion-card-header>
   </ion-card>

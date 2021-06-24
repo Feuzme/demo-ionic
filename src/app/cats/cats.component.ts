@@ -8,13 +8,21 @@ import { CatService } from '../cat.service';
 })
 export class CatsComponent implements OnInit {
 
+  catResponse = {};
+
   constructor(
     private service : CatService
   ) { }
 
   ngOnInit() {
-    this.service.getCats().subscribe((resp)=>{
+    this.refreshCat();
+  }
+
+  refreshCat(){
+    this.service.getCats().subscribe((resp : any) => {
       console.log(resp);
+      //le serveur repond avec un tableau
+      this.catResponse = resp[0];
     });
   }
 

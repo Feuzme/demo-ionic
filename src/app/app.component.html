@@ -1,3 +1,13 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" contentId="main" menuId="menu">
+    <!-- Ferme lme menu au click -->
+    <ion-menu-toggle>
+      <!-- Contenu du menu -->
+      <ion-list>
+        <ion-item routerLink="todo">TODO</ion-item>
+        <ion-item routerLink="cats">Chats</ion-item>
+      </ion-list>
+    </ion-menu-toggle>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

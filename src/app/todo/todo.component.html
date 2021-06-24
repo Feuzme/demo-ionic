@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      TODO List 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form>
+    <ion-card>    
+      <ion-input placeholder="à faire" id="titre" [formControl]="titre"></ion-input>
+    </ion-card>
+    <ion-button (click)="ajouterTache()">
+      <ion-icon name="add-circle-sharp"></ion-icon>
+    </ion-button>
+  </form>
+  <ion-list>
+    <div *ngFor="let todo of todos; let todoIndex = index;">
+      <ion-item-sliding #item>
+        <ion-item>
+          <ion-icon [name]="todo.done ? 'checkmark' : 'close'"></ion-icon> {{todo.titre}}         
+        </ion-item>
+        <ion-item-options side="start" (ionSwipe)="check(item, todoIndex)">
+          <ion-item-option style="background-color:green" >
+            <ion-icon  name='checkmark'></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+        <ion-item-options side="end" (ionSwipe)="delete(item ,todoIndex)">
+          <ion-item-option style="background-color:red">
+            <ion-icon name='trash-sharp'></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </div>        
+  </ion-list>
+</ion-content>

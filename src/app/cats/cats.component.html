@@ -4,19 +4,17 @@
       Les Chats tout pitit
     </ion-title>
   </ion-toolbar>
-</ion-header>
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        Chats ? {{catResponse.width + " " + catResponse.height}}
-        <ion-button (click)="refreshCat()">Un autre !</ion-button>
-      </ion-card-title>
-      <div *ngIf="catResponse.url">
+  </ion-header>
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Chats ? {{catResponse.width + " " + catResponse.height}}
+          <ion-button (click)="refreshCat()">Un autre !</ion-button>
+        </ion-card-title>
         <ion-card-content>
           <ion-img [src]="catResponse.url"></ion-img>
         </ion-card-content>
-    </ion-card-header>
-    </div>
-  </ion-card>
-</ion-content>
+      </ion-card-header>
+    </ion-card>
+  </ion-content>

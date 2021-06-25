@@ -34,7 +34,7 @@ export class TodoComponent implements OnInit {
   }
 
   delete(item :IonItemSliding, index : number){
-    this.todos.splice(index);
+    this.todos.splice(index, 1);
     item.close();
   }
 }

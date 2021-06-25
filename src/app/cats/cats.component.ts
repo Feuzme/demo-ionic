@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CatService } from '../cat.service';
+import { CatService } from '../services/cat.service';
 
 @Component({
   selector: 'app-cats',

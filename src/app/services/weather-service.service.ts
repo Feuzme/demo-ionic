@@ -1,13 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 
-const URL = `${environment.weatherURL}?appid=${environment.weatherAPIKey}&lang=fr&units=metric`;
+const URL = `${environment.weatherURL}?appid=${environment.weatherAPIKey}&lang=fr&units=metric&q=`;
 
 @Injectable({
   providedIn: 'root'
 })
-export class WeatherServiceService {
- 
+export class WeatherService {
 
-  constructor() { }
+  constructor(
+    private http : HttpClient
+  ) { }
+
+    getWeather(ville: string){
+      return this.http.get(URL +""+ ville);//TODO add parameter ville
+    }
 }

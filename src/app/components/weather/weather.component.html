@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      METEO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>  
+  <form>
+    <ion-card>    
+      <ion-input placeholder="Ville" id="titre" [formControl]="ville"></ion-input>
+    </ion-card>
+    <ion-button (click)="getWeather()">
+      <ion-icon name="add-circle-sharp"></ion-icon>
+    </ion-button>
+  </form>
+  <ion-list>
+    <div *ngFor="let resultat of resultats">
+      <ion-card>
+        <ion-card-header>          
+          <ion-card-title>
+            {{resultat.main.temp}}
+          </ion-card-title>
+          <ion-card-content>
+            
+          </ion-card-content>
+        </ion-card-header>
+      </ion-card>
+    </div>        
+  </ion-list>
+</ion-content>

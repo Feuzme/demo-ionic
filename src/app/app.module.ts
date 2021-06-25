@@ -1,5 +1,6 @@
-import { TodoComponent } from './todo/todo.component';
-import { CatsComponent } from './cats/cats.component';
+import { WeatherComponent } from './components/weather/weather.component';
+import { TodoComponent } from './components/todo/todo.component';
+import { CatsComponent } from './components/cats/cats.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     CatsComponent,
-    TodoComponent
+    TodoComponent,
+    WeatherComponent
   ],
   entryComponents: [],
   imports: [

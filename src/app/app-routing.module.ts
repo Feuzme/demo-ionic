@@ -1,9 +1,14 @@
-import { TodoComponent } from './todo/todo.component';
+import { WeatherComponent } from './components/weather/weather.component';
+import { TodoComponent } from './components/todo/todo.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { CatsComponent } from './cats/cats.component';
+import { CatsComponent } from './components/cats/cats.component';
 
 const routes: Routes = [
+  {
+    path:'weather',
+    component:WeatherComponent
+  },
   {
     path:'todo',
     component:TodoComponent
@@ -14,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'cats',
+    redirectTo: 'weather',
     pathMatch: 'full'
   },
 ];
